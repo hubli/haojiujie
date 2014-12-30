@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+
+	<title>好纠结</title>
+	<link href="../../release/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> 	
+</head>
+<body>
+	<header class="titleBar">
+		<h1>我的纠结</h1>
+	</header>
+	<main>
+		<header class="artHeader">
+			<div class="dataArea">
+				<p class="dataArea__date">23</p>
+				<p class="dataArea__mon">7月</p>
+			</div>
+			<p class="artContent">一直想买这块表，但不知道，但不</p>
+		</header>
+		<section class="contentImg">
+			<img src="http://a.hiphotos.baidu.com/image/pic/item/aa18972bd40735fa3ed57c889d510fb30f2408dd.jpg" alt="文章图片"/><span class="placeholder"></span>
+			<ul>
+				<li id="choice1" data-value='1'>买<em>73</em></li>
+				<li id="choice2" data-value='2'>不买<em>24</em></li>
+			</ul>
+		</section>
+		<section>
+			<dl id="comment" class="comment">
+				<dt>友情支招 <em>32</em></dt>
+				<dd>小马哥：我认为你不要选了!</dd>
+				<dd>小马哥：我认为你不要选了!</dd>
+				<dd>小马哥：我认为你不要选了!</dd>
+				<dd>小马哥：我认为你不要选了!</dd>				
+				<dd>小马哥：我认为你不要选了!</dd>
+			</dl>
+		</section>
+	</main>
+	<div class="fixedBtm">		
+		<button id="showCommetPopup" title="帮TA出出主意">出主意</button>
+	</div>
+	<div id="mask" class="popupMask"></div>
+	<div id="popup" class="popup" >
+		<header>
+			<a class="closeBtn" href="javascript:void(0)"></a>
+		</header>
+		<form>
+			<input name="nickname" type="text" class="input input--focus" placeholder="输入您的昵称..."/>
+			<textarea name="content" placeholder="支招" class="input" ></textarea>
+			<button id="submitComment">确 定</button>
+		</form>
+	</div>
+	<script src="../../release/js/lib/zepto.js"></script>
+	<script src="../../release/js/haojiujie.js"></script>
+</body>
+</html>

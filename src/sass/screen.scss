@@ -1,0 +1,225 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+
+body, input, textarea, button {
+	font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;	
+	background: #FFF;
+}
+
+.titleBar {
+	display: none;
+	position: relative;
+	height: 45px;
+	background: #000;		
+	h1 {
+		font-size: 18px;
+		color: #FFF;
+		text-align: center;
+		line-height: 45px;
+	}
+}
+
+main {
+	padding-top: 10px;	
+}
+.artHeader {
+	height: 40px;
+	overflow: hidden;
+	display: table;
+	margin-bottom: 6px;
+}
+.dataArea {
+	display: table-cell;
+	padding: 0 8px;	
+	text-align: center;
+	vertical-align: middle;
+}
+.dataArea__date {
+	font-size: 20px;
+	color: #888;
+	line-height: 24px;
+	font-weight: 700;
+}
+.dataArea__mon {
+	width: 40px;
+	color: #FFF;
+	font-size: 12px;
+	line-height: 16px; 
+	background: #BDC2C9;
+	@include border-radius(14px);
+}
+.artContent {
+	display: table-cell;
+	border-left: 1px dotted #949CA7;
+	height: 40px;
+	line-height: 20px;
+	font-size: 15px;
+	color: #222222;
+	padding-left: 8px;
+	overflow: hidden;
+	vertical-align:middle;
+}
+
+.contentImg {
+	position:relative;
+	margin: 0 8px 16px;
+	overflow: hidden;
+	border: 1px solid #BDC2C9;
+	text-align: center;
+	@include border-radius(4px);
+	ul{	
+		width: 100%;
+		height: 38px;
+		position: absolute;
+		top: 0;		
+	}
+	li {
+		height: 38px;
+		width: 50%;
+		line-height: 35px;
+		text-align: center;
+		font-weight: 700;
+		font-size: 14px;
+		color: #FFF;
+		em {
+			margin-left: 5px;
+			font-weight: normal;
+		}		
+		&:first-child {			
+			float: left;
+			background: rgba(233,107,152, 0.9);
+		}
+		&:last-child {
+			float: right;
+			background: rgba(60,205,199, 0.9);
+		}
+	}
+	img {
+		width: 100%;		
+		vertical-align: middle;		
+	}
+	.placeholder {
+		@include inline-block;
+		width: 0px;
+		height: 100%;		
+		vertical-align: middle;	
+	}	
+}
+.comment {
+	padding: 0 0 66px;
+	dt {
+		height: 26px;
+		line-height: 26px;
+		padding: 0 8px; 
+		background: #F7EFF2;
+		color: #ec6997;
+		font-size: 14px;
+	}
+	dd {
+		padding: 10px 8px;
+		line-height: 20px;
+		color: #555;
+		border-bottom: 1px solid #E3E3E3;
+		font-size: 14px; 
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}
+
+.fixedBtm {
+	width: 100%;
+	position: fixed;
+	bottom: 0;		
+	background: rgba(255, 255, 255, .8);
+	border-top: 1px solid #E3E3E3;
+	overflow: hidden;
+	padding: 14px 10px;
+	@include box-sizing(border-box);
+	button {
+		width: 100%;
+		height: 38px;
+		background: #EC6997;
+		border: none;
+		@include border-radius(4px);
+		font-size: 18px;
+		color: #FFF;
+		font-weight: 800px;
+	}
+}
+
+.popupMask {
+	display: none;
+	top: 0;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	height: 960px;
+	background: rgba(0, 0, 0, .8);
+}
+.popup {
+	display: none;
+	position: fixed;
+	top: 50%;
+	height: 308px;
+	background: #FFF;
+	margin: -164px 15px;
+	@include border-radius(6px);
+	header {
+		height: 40px;
+		text-align: right;		
+		a {
+			@include inline-block;
+			width: 40px;
+			height: 40px;
+			background: url(../img/ic_close.png) no-repeat center center;
+			background-size: 14px 14px;
+			&::before {
+				content: "";
+				display: block;
+				width: 1px;
+				height: 40px;
+				@include background-image(linear-gradient(#BDC2C9, #D7DADE, #FBFBFC));
+			}		
+		}
+	}
+}
+
+form {
+	padding: 15px;
+}
+.input {
+	width: 100%;
+	border: 1px solid #BDC2C9;	
+	@include border-radius(4px);	
+	@include box-sizing(border-box);
+	padding: 8px 14px;
+	line-height: 22px;
+	margin-bottom: 8px;
+	font-size: 14px;
+	color: #555;
+	outline: none;
+}
+.input--error {
+	border-color: #C00;
+}
+textarea {
+	resize: none;
+	height: 120px;
+}
+button {
+		width: 100%;
+		height: 45px;
+		background: #EC6997;
+		border: none;
+		@include border-radius(4px);
+		font-size: 18px;
+		color: #FFF;
+		font-weight: 800px;
+	}
+
